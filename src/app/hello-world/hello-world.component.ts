@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-hello-world',
@@ -6,14 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./hello-world.component.css'],
 })
 export class HelloWorldComponent {
-  message = 'Hello ';
-
-  constructor() {
-    console.log('HelloWorldComponent constructor');
-  }
+  message = 'hello';
 
   updateMessage() {
-    this.message = 'Hello Angular updated';
-    console.log('Message updated');
+    console.log('updateMessage');
+
+    this.message = 'test';
   }
 }
