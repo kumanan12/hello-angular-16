@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-hello-world',
+  templateUrl: './hello-world.component.html',
+  styleUrls: ['./hello-world.component.css'],
+})
+export class HelloWorldComponent {
+  message = 'Hello ';
+
+  constructor() {
+    console.log('HelloWorldComponent constructor');
+  }
+
+  updateMessage() {
+    this.message = 'Hello Angular updated';
+    console.log('Message updated');
+  }
+}
